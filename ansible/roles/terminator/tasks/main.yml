@@ -1,0 +1,30 @@
+---
+- name: Install terminator
+  package:
+    name: terminator
+    state: present
+  become: true
+
+- name: Create font folder
+  file:
+    path: ~/.fonts/
+    state: directory
+
+- name: Download fonts
+  get_url:
+    url: "{{ item }}"
+    dest: ~/.fonts/
+  loop: "{{ fonts }}"
+
+- name: Clean font cache
+  command: fc-cache -vf ~/.fonts/
+
+- name: Create terminator directory
+  file:
+    path: ~/.config/terminator/
+    state: directory
+
+- name: Configure terminator
+  template:
+    src: terminator.config.toml.j2
+    dest: ~/.config/terminator/config

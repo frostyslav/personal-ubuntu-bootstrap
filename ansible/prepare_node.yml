@@ -1,0 +1,34 @@
+---
+- name: Prepare node
+  hosts: localhost
+  roles:
+    - role: robertdebock.openssh
+      become: true
+      tags:
+        - openssh
+    - role: terminator
+      tags:
+        - terminal
+    - role: tmux
+      tags:
+        - terminal
+    - role: zsh
+      tags:
+        - shell
+    - role: vscode
+      tags:
+        - editor
+    - role: vim
+      tags:
+        - editor
+    - role: geerlingguy.docker
+      become: true
+      tags:
+        - docker
+    - role: quality_of_life
+      become: true
+      tags:
+        - qol
+    - role: projects
+      tags:
+        - projects

@@ -1,0 +1,8 @@
+---
+- name: Install tmux
+  snap:
+    name:
+      - tmux
+    channel: latest/stable
+    classic: true
+  become: true

@@ -1,0 +1,12 @@
+---
+- name: Install Visual Studio Code
+  snap:
+    name:
+      - code
+    classic: true
+  become: true
+
+- name: Install Visual Studio Code plugins
+  command: "code --install-extension {{ item }}"
+  ignore_errors: true
+  loop: "{{ vscode_plugins }}"

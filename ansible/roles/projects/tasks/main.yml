@@ -1,0 +1,9 @@
+---
+- name: Create directory structure
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - ~/work
+    - ~/work/projects
+    - ~/work/opensource

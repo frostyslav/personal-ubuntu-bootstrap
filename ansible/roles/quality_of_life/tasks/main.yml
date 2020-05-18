@@ -1,0 +1,10 @@
+---
+- name: Install quality of life stuff
+  package:
+    name: "{{ qol_packages }}"
+    state: present
+
+- name: Install python quality of life packages
+  pip:
+    name: icdiff
+    state: present

@@ -1,0 +1,25 @@
+---
+- name: Install zsh
+  package:
+    name:
+      - zsh
+      - git
+      - autojump
+    state: present
+  become: true
+
+- name: Download antigen
+  get_url:
+    url: http://git.io/antigen
+    dest: "{{ antigen_script }}"
+
+- name: Configure zsh
+  template:
+    src: zshrc.sh.j2
+    dest: ~/.zshrc
+
+- name: Set zsh as default shell
+  user:
+    name: "{{ ansible_user }}"
+    shell: /bin/zsh
+  become: true

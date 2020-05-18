@@ -1,0 +1,4 @@
+---
+qol_packages:
+  - htop
+  - mc

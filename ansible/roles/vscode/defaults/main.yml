@@ -1,0 +1,11 @@
+---
+vscode_plugins:
+  - vscoss.vscode-ansible
+  - ms-python.python
+  - bungcip.better-toml
+  - wholroyd.jinja
+  - eriklynd.json-tools
+  - bbenoist.vagrant
+  - rebornix.ruby
+  - ms-vscode.go
+  - ms-vscode.atom-keybindings

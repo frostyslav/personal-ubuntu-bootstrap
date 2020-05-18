@@ -1,0 +1,4 @@
+---
+antigen_script: ~/.antigen.zsh
+
+default_editor: vim
