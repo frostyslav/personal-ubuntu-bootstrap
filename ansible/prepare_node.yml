@@ -32,3 +32,17 @@
     - role: projects
       tags:
         - projects
+    - role: rvm.ruby
+      vars:
+        rvm1_rubies: ['ruby-2.7.1']
+        rvm1_user: "{{ lookup('env','USER') }}"
+      tags:
+        - ruby
+    - role: fubarhouse.golang
+      vars:
+        go_version: 1.14.3
+        GOPATH: "/home/{{ lookup('env','USER') }}/go"
+        GOROOT: /usr/local/go
+      become: true
+      tags:
+        - golang

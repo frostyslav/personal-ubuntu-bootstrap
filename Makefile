@@ -20,4 +20,6 @@ pipenv-sync: ## sync pipenv
 prepare-node: install-ansible ## installs and configures software
 	/home/$$USER/.local/bin/pipenv run ansible-galaxy install robertdebock.openssh
 	/home/$$USER/.local/bin/pipenv run ansible-galaxy install geerlingguy.docker
+	/home/$$USER/.local/bin/pipenv run ansible-galaxy install rvm.ruby
+	/home/$$USER/.local/bin/pipenv run ansible-galaxy install fubarhouse.golang
 	/home/$$USER/.local/bin/pipenv run ansible-playbook -i 'localhost,' ansible/prepare_node.yml -e ansible_connection=local

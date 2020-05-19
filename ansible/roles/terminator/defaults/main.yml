@@ -1,6 +1,6 @@
 ---
 default_font_name: MesloLGS NF
-default_font_size: 12
+default_font_size: 11
 
 fonts:
   - https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
