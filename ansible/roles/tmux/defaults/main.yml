@@ -1,0 +1,28 @@
+---
+# new window retains current path
+tmux_conf_new_window_retain_current_path: true
+
+# new pane retains current path
+tmux_conf_new_pane_retain_current_path: true
+
+# new pane tries to reconnect ssh sessions (experimental)
+tmux_conf_new_pane_reconnect_ssh: true
+
+# prompt for session name when creating a new session
+tmux_conf_new_session_prompt: true
+
+# RGB 24-bit colour support (tmux >= 2.2)
+tmux_conf_theme_24b_colour: true
+
+# highlight focused pane (tmux >= 2.1)
+tmux_conf_theme_highlight_focused_pane: false
+
+# pane border style
+tmux_conf_theme_pane_border_style: fat
+
+# in copy mode, copying selection also copies to the OS clipboard
+tmux_conf_copy_to_os_clipboard: true
+
+tmux_history_limit: 10000
+
+tmux_mouse: on

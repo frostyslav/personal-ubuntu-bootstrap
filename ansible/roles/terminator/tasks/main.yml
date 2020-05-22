@@ -18,6 +18,7 @@
 
 - name: Clean font cache
   command: fc-cache -vf ~/.fonts/
+  changed_when: false
 
 - name: Create terminator directory
   file:

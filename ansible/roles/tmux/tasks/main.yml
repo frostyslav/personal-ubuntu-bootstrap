@@ -1,8 +1,25 @@
 ---
 - name: Install tmux
-  snap:
+  package:
     name:
       - tmux
-    channel: latest/stable
-    classic: true
+      - xsel
+    state: present
   become: true
+
+- name: Download oh-my-tmux
+  git:
+    repo: https://github.com/gpakosz/.tmux.git
+    dest: ~/.tmux
+    update: no
+
+- name: Create a symlink for tmux.conf
+  file:
+    src: ~/.tmux/.tmux.conf
+    dest: ~/.tmux.conf
+    state: link
+
+- name: Configure tmux
+  template:
+    src: .tmux.conf.local.j2
+    dest: ~/.tmux.conf.local

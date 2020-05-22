@@ -2,6 +2,10 @@
 - name: Prepare node
   hosts: localhost
   roles:
+    - role: quality_of_life
+      become: true
+      tags:
+        - qol
     - role: robertdebock.openssh
       become: true
       tags:
@@ -25,10 +29,6 @@
       become: true
       tags:
         - docker
-    - role: quality_of_life
-      become: true
-      tags:
-        - qol
     - role: projects
       tags:
         - projects

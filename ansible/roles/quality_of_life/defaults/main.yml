@@ -2,3 +2,4 @@
 qol_packages:
   - htop
   - mc
+  - curl
