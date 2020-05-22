@@ -15,10 +15,7 @@
     url: "{{ item }}"
     dest: ~/.fonts/
   loop: "{{ fonts }}"
-
-- name: Clean font cache
-  command: fc-cache -vf ~/.fonts/
-  changed_when: false
+  notify: clear font cache
 
 - name: Create terminator directory
   file:

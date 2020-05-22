@@ -1,0 +1,3 @@
+---
+- name: clear font cache
+  command: fc-cache -vf ~/.fonts/

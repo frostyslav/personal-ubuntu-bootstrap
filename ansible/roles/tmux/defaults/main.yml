@@ -25,4 +25,4 @@ tmux_conf_copy_to_os_clipboard: true
 
 tmux_history_limit: 10000
 
-tmux_mouse: on
+tmux_mouse: "on"
