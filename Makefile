@@ -5,7 +5,7 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 install-prerequisites: update-packages ## install prerequisites
-	sudo apt-get install python3-pip -y
+	sudo apt-get install python3-pip libssl-dev libffi-dev fzf -y
 	pip3 install --user pipenv
 
 update-packages: ## updates ubuntu packages
